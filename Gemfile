@@ -31,7 +31,7 @@ gem 'spring',        group: :development
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
 group :production do
   gem 'pg'
