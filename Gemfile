@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
@@ -31,6 +31,7 @@ gem 'spring',        group: :development
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 group :production do
   gem 'pg'
