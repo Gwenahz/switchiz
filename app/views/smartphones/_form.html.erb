@@ -1,0 +1,28 @@
+<%= form_for @smartphone, :html => { :multipart => true } do |f| %>
+  <% if @smartphone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@smartphone.errors.count, "error") %> prohibited this smartphone from being saved:</h2>
+
+      <ul>
+      <% @smartphone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :marque %><br>
+    <%= f.text_field :marque, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :modele %><br>
+    <%= f.text_field :modele, class: "form-control" %>
+  </div>
+  <div class="">
+    <%= f.file_field :image, class: "form-control" %>
+  </div><br>
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
