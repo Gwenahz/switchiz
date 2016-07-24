@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'dashboards/home'
+
+  get 'dashboards/smartphone'
+
   devise_for :users
   resources :smartphones
 
