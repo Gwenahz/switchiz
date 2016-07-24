@@ -1,6 +1,7 @@
-<h1>Editing profil</h1>
+<h1>Mon profil</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @profil %> |
-<%= link_to 'Back', profils_path %>
+<% if @profil.adresse == nil %>
+	<%= render 'formadresse' %>
+<% else  %>
+	<%= render 'form' %>
+<% end  %>

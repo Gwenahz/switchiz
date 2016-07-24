@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   resources :profils
 
   get 'dashboards/home'
-
   get 'dashboards/smartphone'
+  get 'dashboards/reparer'
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   resources :smartphones
 
   get 'pages/about'

@@ -1,0 +1,56 @@
+<%= form_for(@profil) do |f| %>
+  <% if @profil.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profil.errors.count, "error") %> prohibited this profil from being saved:</h2>
+
+      <ul>
+      <% @profil.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="col-md-12">
+    <div class="col-md-4">
+      <h3>Récapitulatif</h3>
+    </div>
+    <div class="col-md-8">
+      <div class="field">
+        <%= f.label :smartphone_id %><br>
+        <%= f.hidden_field :smartphone_id, :id => 'profil_modele' %>
+        <div class="col-md-12 dropdown">
+          <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="dropdown_text">
+              Sélectionnez votre smartphone
+              <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <% Smartphone.where(marque: 'Apple').to_a.each do |smartphone| %>
+              <li><a href="" onClick="return getmodele(<%= smartphone.id %>);"><%= smartphone.modele %></a></li>
+            <% end %>
+            <li class="divider"></li>
+            <li><a href="" onClick="">Autre</a></li>
+          </ul>
+        </div>
+      </div><br>
+      <div class="field">
+        <%= f.label :prenom %><br>
+        <%= f.text_field :prenom %>
+      </div>
+      <div class="field">
+        <%= f.label :nom %><br>
+        <%= f.text_field :nom %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  function getmodele(idmodele) {
+      document.getElementById('profil_modele').value = idmodele;
+      $("a#dropdown_text").text("Modifier");
+      return false;
+  }
+</script>
