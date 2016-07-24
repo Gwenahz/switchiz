@@ -1,0 +1,53 @@
+<%= form_for(@profil) do |f| %>
+  <% if @profil.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profil.errors.count, "error") %> prohibited this profil from being saved:</h2>
+
+      <ul>
+      <% @profil.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :smartphone_id %><br>
+    <%= f.number_field :smartphone_id %>
+  </div>
+  <div class="field">
+    <%= f.label :couleur_id %><br>
+    <%= f.number_field :couleur_id %>
+  </div>
+  <div class="field">
+    <%= f.label :prenom %><br>
+    <%= f.text_field :prenom %>
+  </div>
+  <div class="field">
+    <%= f.label :nom %><br>
+    <%= f.text_field :nom %>
+  </div>
+  <div class="field">
+    <%= f.label :adresse %><br>
+    <%= f.text_field :adresse %>
+  </div>
+  <div class="field">
+    <%= f.label :compl_adresse %><br>
+    <%= f.text_field :compl_adresse %>
+  </div>
+  <div class="field">
+    <%= f.label :imei %><br>
+    <%= f.number_field :imei %>
+  </div>
+  <div class="field">
+    <%= f.label :numtel %><br>
+    <%= f.text_field :numtel %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
