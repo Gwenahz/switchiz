@@ -35,7 +35,7 @@ gem 'aws-sdk', '< 2.0'
 gem "figaro"
 gem 'devise', '3.4.1'
 gem 'devise-i18n'
-
+gem 'stripe'
 
 group :production do
   gem 'pg'

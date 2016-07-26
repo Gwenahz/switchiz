@@ -15,7 +15,7 @@
       <h3>Récapitulatif</h3>
     </div>
     <div class="col-md-8">
-      <div class="field">
+      <div class="form-group">
         <%= f.label :smartphone_id %><br>
         <%= f.hidden_field :smartphone_id, :id => 'profil_modele' %>
         <div class="col-md-12 dropdown">
@@ -32,16 +32,16 @@
           </ul>
         </div>
       </div><br>
-      <div class="field">
-        <%= f.label :prenom %><br>
-        <%= f.text_field :prenom %>
+      <div class="form-group">
+        <%= f.label "Prénom*" %><br>
+        <%= f.text_field :prenom, class: "form-control", required: true %>
       </div>
-      <div class="field">
-        <%= f.label :nom %><br>
-        <%= f.text_field :nom %>
+      <div class="form-group">
+        <%= f.label "Nom*" %><br>
+        <%= f.text_field :nom, class: "form-control", required: true %>
       </div>
       <div class="actions">
-        <%= f.submit %>
+        <%= f.submit class: "btn btn-primary"%>
       </div>
     </div>
   </div>
