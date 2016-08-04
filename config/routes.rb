@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  resources :homes, only: [:show]
+
+  resources :prelaunches do
+    collection do
+      # get 'friends' => 'orders#show'
+    end
+  end
+
   resources :profils
 
   get 'dashboards/home'
@@ -12,7 +21,9 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/index'
 
-  root 'pages#index'
+  get 'friends' => 'prelaunches#friends'
+
+  root 'prelaunches#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

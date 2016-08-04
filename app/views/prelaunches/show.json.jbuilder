@@ -1,0 +1,1 @@
+json.partial! "prelaunches/prelaunch", prelaunch: @prelaunch

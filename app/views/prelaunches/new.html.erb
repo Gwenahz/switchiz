@@ -1,0 +1,39 @@
+<div class="container text-center">
+	<h1>Et si l'impossible devenait possible <%= @n %> ?</h1>
+	<h2>La technologie et l'expérience client au service de votre smartphone <br>
+	Vous êtes aux premières loges pour tout savoir ! Restez y ;)</h2> <br><br>
+	<%= render 'form' %>
+
+	<div class="col-md-12 text-center">
+		<br><br><br><br>
+		<p>Copyright 2016 - gwenael@switchiz.co</p>
+	</div>
+</div>
+
+<%= render 'modalone' %>
+
+<script type="text/javascript">
+	
+	mixpanel.track("Prelaunch homepage");
+
+	function addEvent(obj, evt, fn) {
+    if (obj.addEventListener) {
+        obj.addEventListener(evt, fn, false);
+    }
+    else if (obj.attachEvent) {
+        obj.attachEvent("on" + evt, fn);
+    }
+}
+
+addEvent(document, 'mouseout', function(evt) {
+    if (evt.toElement == null && evt.relatedTarget == null) {
+        $('#myModal').modal('show');
+    }
+});
+
+	function funct() {
+    	if ($('.email').is('email') == 1) {
+    		alert("Yoyyiyi");
+    	};
+	}
+</script>

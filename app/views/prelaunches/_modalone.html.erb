@@ -1,0 +1,18 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Vous nous quittez déjà <%= @n %> ?</h4>
+      </div>
+      <div class="modal-body">
+        <div class="text-center">
+          <%= image_tag("chatpotte.gif", width: '300') %><br><br>
+          Pourtant on fait tout ça avec amour <3 <br><br>
+          <%= render 'modalform' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

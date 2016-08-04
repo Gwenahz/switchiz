@@ -1,0 +1,33 @@
+<h1>Les bons plans ça se partage ?</h1>
+<h2>Gagnez jusqu’à 1 an d'abonnement offert au club en faisant découvrir Switchiz à vos amis.</h2>
+
+<p>Voici votre lien d'invitation :
+<br>www.switchiz.co/?ref=<%= @code %></p> <br>
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.lasmartphonerie.com%2F?prenom=Gwen&layout=button&size=large&mobile_iframe=true&appId=589490407729226&width=73&height=28" width="73" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Hello ! Venez découvrir Switchiz" data-url="http://www.lasmartphonerie.com/?ref=<%= @code %>" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Vous pouvez également inviter vos amis en 1 seul clic via Fabebook ou Twitter</p>
+
+<br><br><br>
+<p>Plus vos amis s’inscriront via votre lien d’invitation et plus vous aurez de vous aurez de chance de gagner le gros lot :) C’est génial non ?</p>
+
+<%= render 'modaltwo' %>
+
+<script type="text/javascript">
+	
+	function addEvent(obj, evt, fn) {
+    if (obj.addEventListener) {
+        obj.addEventListener(evt, fn, false);
+    }
+    else if (obj.attachEvent) {
+        obj.attachEvent("on" + evt, fn);
+    }
+}
+
+addEvent(document, 'mouseout', function(evt) {
+    if (evt.toElement == null && evt.relatedTarget == null) {
+        $('#myModaltwo').modal('show');
+    }
+});
+</script>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @prelaunch.email %>
+</p>
+
+<p>
+  <strong>Commentaire:</strong>
+  <%= @prelaunch.commentaire %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @prelaunch.count %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @prelaunch.code %>
+</p>
+
+<p>
+  <strong>Ref:</strong>
+  <%= @prelaunch.ref %>
+</p>
+
+<%= link_to 'Edit', edit_prelaunch_path(@prelaunch) %> |
+<%= link_to 'Back', prelaunches_path %>

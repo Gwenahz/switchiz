@@ -37,6 +37,8 @@ gem 'devise', '3.4.1'
 gem 'devise-i18n'
 gem 'stripe'
 
+gem 'social-share-button', '~> 0.1.6'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'

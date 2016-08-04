@@ -1,0 +1,20 @@
+<%= form_for(@prelaunch) do |f| %>
+  <% if @prelaunch.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4>Votre email n'est pas valide</h4>
+    </div>
+  <% end %>
+  <%= f.hidden_field :ref, :value => @ref %>
+  <div class=""></div>
+  <div class="">
+    <div class="form-group">
+      <%= f.text_field :email, class: "form-control email", placeholder: "Saisissez votre email", required: true, :onkeyup => "funct()" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "D'accord, j'ai craqué", class: "btn btn-danger btn-block" %>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+<% end %>

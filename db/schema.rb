@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160724100542) do
+ActiveRecord::Schema.define(version: 20160731191804) do
+
+  create_table "prelaunches", force: true do |t|
+    t.string   "email"
+    t.text     "commentaire"
+    t.integer  "count"
+    t.string   "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "ref"
+  end
 
   create_table "profils", force: true do |t|
     t.integer  "user_id"
