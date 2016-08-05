@@ -1,3 +1,5 @@
+
+
 <!-- Header -->
 <header id="" class="header-partage">
     <div class="container text-center">
@@ -9,11 +11,12 @@
             <h3 class="header-first-text">Merci <%= @aventurier.commentaire %> ! <br> Ne laisse pas tes amis sur le côté</h3>
             <h1 class="header-next-text">INVITE TES AMIS ET GAGNE DES CADEAUX !</h1>
             Partage ton lien d'invitation sur Facebook, Twitter <br> ou par mail et gagne des cadeaux pour chaque amis inscrits<br><br>
-            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.lasmartphonerie.com%2F?prenom=Gwen&layout=button&size=large&mobile_iframe=true&appId=589490407729226&width=90&height=28&locale=fr_FR" width="90" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
-            <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Hello ! Venez découvrir Switchiz" data-url="http://www.lasmartphonerie.com/?ref=<%= @code %>" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br><br>
+            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fswitchiz.co%2F?inv=<%= @code %>&layout=button&size=large&mobile_iframe=true&appId=1883784975182089&width=90&height=28&locale=fr_FR" width="90" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
-            <input readonly class="form-control champ-partage" value="http://switchiz.co/?ref=<%= @code %>">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Switchiz arrive bientôt et j&#39;ai pris ma place aux 1ères loges ! Qui me suit ?" data-url="http://switchiz.co/?inv=<%= @code %>" data-hashtags="ChouchouteurDeSmartphones" data-lang="fr" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br><br>
+
+            <input readonly class="form-control champ-partage" value="http://switchiz.co/?inv=<%= @code %>">
         </div>
         <div class="col-md-3"></div>
     </div>

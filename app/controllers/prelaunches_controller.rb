@@ -15,6 +15,7 @@ class PrelaunchesController < ApplicationController
 
   def friends
     @code = params[:code]
+    @codefb = "ref="+@code
     @aventurier = Prelaunch.find_by(code: @code)
 
     if Prelaunch.exists?(code: @code)
@@ -28,10 +29,10 @@ class PrelaunchesController < ApplicationController
 
   def new
     @n = params[:n]
-    @ref = params[:ref]
-    if @ref.blank?
+    @inv = params[:inv]
+    if @inv.blank?
     else
-      @aventurier = Prelaunch.find_by(code: @ref)
+      @aventurier = Prelaunch.find_by(code: @inv)
       @comment = @aventurier.commentaire
     end
     @prelaunch = Prelaunch.new
