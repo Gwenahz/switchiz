@@ -29,8 +29,11 @@ class PrelaunchesController < ApplicationController
   def new
     @n = params[:n]
     @ref = params[:ref]
-    @aventurier = Prelaunch.find_by(code: @ref)
-    @comment = @aventurier.commentaire
+    if @ref.blank?
+    else
+      @aventurier = Prelaunch.find_by(code: @ref)
+      @comment = @aventurier.commentaire
+    end
     @prelaunch = Prelaunch.new
     respond_with(@prelaunch)
   end
