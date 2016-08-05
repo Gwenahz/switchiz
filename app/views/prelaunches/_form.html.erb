@@ -6,10 +6,11 @@
     </div>
   <% end %>
   <%= f.hidden_field :ref, :value => @ref %>
+  <%= f.hidden_field :commentaire, :value => @n %>
   <div class="col-md-3"></div>
   <div class="col-md-6">
     <div class="form-group col-md-7">
-      <%= f.text_field :email, class: "form-control champ", placeholder: "Saisis ton email", required: true %>
+      <%= f.text_field :email, class: "form-control champ", placeholder: "Entre ton email", required: true %>
     </div>
     <div class="actions col-md-5">
       <%= f.submit "Rejoindre l'aventure !", class: "btn btn-primary btn-block" %>

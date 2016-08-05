@@ -15,6 +15,7 @@ class PrelaunchesController < ApplicationController
 
   def friends
     @code = params[:code]
+    @aventurier = Prelaunch.find_by(code: @code)
     if Prelaunch.exists?(code: @code)
     else
       redirect_to root_path, alert: "Votre email est invalide"
@@ -27,6 +28,7 @@ class PrelaunchesController < ApplicationController
   def new
     @n = params[:n]
     @ref = params[:ref]
+    @aventurier = Prelaunch.find_by(code: @ref)
     @prelaunch = Prelaunch.new
     respond_with(@prelaunch)
   end

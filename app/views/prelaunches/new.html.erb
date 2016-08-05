@@ -2,11 +2,20 @@
 <header id="" class="header-landing">
     <div class="container text-center">
     	<div class="container text-center">
-    		<%= image_tag "logo.png", :class => "logo", :size => "175x123" %>
+    		<%= image_tag "logo.png", :class => "logo-prelaunch", :size => "175x123" %>
 		</div>
     	<div class="header-landing-text">
-    		<h1 class="header-first-text">Hello <%= @n %></h1>
-			<h2 class="header-next-text">Prépare-toi à Sourire 7 Fois Plus qu'Avant !</h2>
+    		<% if @n.blank? %>
+    			<% if @aventurier.commentaire.blank? %>
+    				<h1 class="header-first-text">L'aventure Switchiz commence bientôt</h1>
+    			<% else %>
+    				<h1 class="header-first-text"><%= @aventurier.commentaire %> t'invite à découvrir Switchiz</h1>
+    			<% end %>
+    		<% else %>
+    			<h1 class="header-first-text">Hello <%= @n %></h1>
+    		<% end %>
+    		
+			<h2 class="header-next-text">Prépare-Toi à Sourire 7 Fois Plus Qu'avant !</h2>
     	</div>
 	</div>
 
@@ -23,7 +32,7 @@
 	<%= render 'form' %>
 
 	<div class="col-md-12 text-center"><br>
-		<p>Copyright Switchiz 2016 - gwenael@switchiz.co</p>
+		<p>Copyright Switchiz 2016 - <a href="mailto:gwenael@switchiz.co">gwenael@switchiz.co</a></p>
 	</div>
 </section>
 

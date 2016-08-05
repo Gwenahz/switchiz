@@ -1,19 +1,41 @@
-<h1>Les bons plans ça se partage ?</h1>
-<h2>Gagnez jusqu’à 1 an d'abonnement offert au club en faisant découvrir Switchiz à vos amis.</h2>
+<!-- Header -->
+<header id="" class="header-partage">
+    <div class="container text-center">
+        <div class="container text-center">
+            <%= image_tag "logo.png", :class => "logo-prelaunch-bis", :size => "125x88" %>
+        </div><br>
+        <div class="col-md-3"></div>
+        <div class="header-partage-text col-md-6" style="background-color: rgba(0,0,0,0.4); padding: 0px 20px 20px 15px; border-radius: 10px; display:block;">
+            <h3 class="header-first-text">Merci <%= @aventurier.commentaire %> ! <br> Ne laisse pas tes amis sur le côté</h3>
+            <h1 class="header-next-text">INVITE TES AMIS ET GAGNE DES CADEAUX !</h1>
+            Partage ton lien d'invitation sur Facebook, Twitter <br> ou par mail et gagne des cadeaux pour chaque amis inscrits<br><br>
+            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.lasmartphonerie.com%2F?prenom=Gwen&layout=button&size=large&mobile_iframe=true&appId=589490407729226&width=90&height=28&locale=fr_FR" width="90" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
-<p>Voici votre lien d'invitation :
-<br>www.switchiz.co/?ref=<%= @code %></p> <br>
-<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.lasmartphonerie.com%2F?prenom=Gwen&layout=button&size=large&mobile_iframe=true&appId=589490407729226&width=73&height=28" width="73" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Hello ! Venez découvrir Switchiz" data-url="http://www.lasmartphonerie.com/?ref=<%= @code %>" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br><br>
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Hello ! Venez découvrir Switchiz" data-url="http://www.lasmartphonerie.com/?ref=<%= @code %>" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <input readonly class="form-control champ-partage" value="http://switchiz.co/?ref=<%= @code %>">
+        </div>
+        <div class="col-md-3"></div>
+    </div>
 
-<p>Vous pouvez également inviter vos amis en 1 seul clic via Fabebook ou Twitter</p>
+</header>
 
-<br><br><br>
-<p>Plus vos amis s’inscriront via votre lien d’invitation et plus vous aurez de vous aurez de chance de gagner le gros lot :) C’est génial non ?</p>
+<section class="section-landing">
+    <div class=container>
+        <h3>Comment ça marche ?</h3>
+        <div class="col-md-4" style="color: #52a7bf"><strong><br>Amis inscrits : <%= @aventurier.count %> <br> (Vous n'avez aucun ami inscrit pour le moment)</strong></div>
+        <div class="col-md-2"><br><span style="color: #52a7bf" >5 amis inscrits </span><br> = <br>1 Accessoire Switchiz Offert<br></div>
+        <div class="col-md-2"><br><span style="color: #52a7bf" >10 amis inscrits </span><br> = <br>1 Mois d'Entretien Switchiz Offert<br></div>
+        <div class="col-md-2"><br><span style="color: #52a7bf" >25 amis inscrits </span><br> = <br>6 Mois d'Entretien Switchiz Offert<br></div>
+        <div class="col-md-2"><br><span style="color: #52a7bf" >50 amis inscrits </span><br> = <br>1 An d'Entretien Switchiz Offert<br></div>
+        <div class="giftbar col-md-12"></div>
+        <div class="col-md-12"></div>
+    </div>
+</section>
 
 <%= render 'modaltwo' %>
 
+<!--
 <script type="text/javascript">
 	
 	function addEvent(obj, evt, fn) {
@@ -31,3 +53,4 @@ addEvent(document, 'mouseout', function(evt) {
     }
 });
 </script>
+-->

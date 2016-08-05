@@ -17,15 +17,34 @@
     -o-background-size: cover;
 }
 
-.header-first-text {
-	//font-size: 50px;
+.header-partage {
+	height : 480px;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: image-url('relovution.jpg');
+    background-position: center 50%;
+    background-repeat: none;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.header-partage-text .header-first-text {
+	font-size: 20px;
+    padding-top: 10px;
+}
+
+.header-partage-text .header-next-text {
+    font-size: 30px;
 }
 
 .header-landing-text {
 	padding-top: 80px;
 }
 
-.logo {
+.logo-prelaunch {
 	margin-top: 60px;
 	float: center;
 }
@@ -59,7 +78,24 @@ text-align: center;
     font-size: 16px;
 }
 
+.champ-partage {
+	height: 35px;
+	width: 285px;
+    padding-top: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    opacity : 0.5;
+}
+
 @media(min-width:768px) {
+    
+    .giftbar {
+    width: 275px;
+    height: 5px;
+    margin: 20px 20px 20px 50px;
+    background-color: #52a7bf;
+    }
 
 	.header-landing {
 		height : 475px;
@@ -80,8 +116,13 @@ text-align: center;
 		padding-top: 125px;
 	}
 
-	.logo {
+	.logo-prelaunch {
 		margin-top: 80px;
+		float: center;
+	}
+
+	.logo-prelaunch-bis {
+		margin-top: 30px;
 		float: center;
 	}
 
