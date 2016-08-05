@@ -25,7 +25,7 @@ class PrelaunchesController < ApplicationController
   end
 
   def new
-    #@n = params[:n]
+    @n = params[:n]
     @ref = params[:ref]
     @prelaunch = Prelaunch.new
     respond_with(@prelaunch)

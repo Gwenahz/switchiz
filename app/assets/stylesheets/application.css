@@ -14,3 +14,7 @@
  *= require social-share-button
  *= require_self
  */
+
+body {
+	font-family: 'Rubik', Sans-Serif;
+}

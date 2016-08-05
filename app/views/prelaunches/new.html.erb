@@ -1,17 +1,28 @@
-<div class="container text-center">
-	<h1>Et si l'impossible devenait possible <%= @n %> ?</h1>
-	<h2>La technologie et l'expérience client au service de votre smartphone <br>
-	Vous êtes aux premières loges pour tout savoir ! Restez y ;)</h2> <br><br>
+<!-- Header -->
+<header id="" class="header-landing">
+    <div class="container text-center">
+    	<%= image_tag "logo.png", :class => "logo", :size => "175x123" %><br><br><br><br><br><br><br><br><br>
+	</div>
+
+<%= render 'modalone' %>
+</header>
+
+<section class="section-landing">
+	<h1 class="header-first-text">Hello <%= @n %> !</h1>
+	<h2 class="header-next-text">L'aventure Switchiz commence bientôt !</h2>
+	<div class="col-md-12 text-center">
+		<i class="fa fa-key fa-2x" aria-hidden="true"></i>
+	</div>
+	<h2>Fais partie des premiers au courant ;)</h2>
 	<%= render 'form' %>
 
 	<div class="col-md-12 text-center">
-		<br><br><br><br>
 		<p>Copyright 2016 - gwenael@switchiz.co</p>
 	</div>
-</div>
+</section>
 
-<%= render 'modalone' %>
 
+<!--
 <script type="text/javascript">
 	
 	mixpanel.track("Prelaunch homepage");
@@ -37,3 +48,4 @@ addEvent(document, 'mouseout', function(evt) {
     	};
 	}
 </script>
+-->

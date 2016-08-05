@@ -27,6 +27,8 @@
   <meta name="twitter:description" content="Switchiz prend soin de vous et de votre smartphone !" />
   <meta name="twitter:image" content="http://www.switchiz.co/assets/switchiz-fb-og.jpg" />
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
   <script src="js/is.js"></script> 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -46,10 +48,13 @@
     <%= render 'layouts/header' %>
   <% end %>
 	
-	<div class="container">
-		<p class="notice"><%= notice %></p>
+  <% if current_page?(root_path) || current_page?(friends_path) %>
+    <div class="">
+  <% else %>
+    <div class="container">
+		  <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-
+    <% end %>
 		<%= yield %>
 	</div>
 

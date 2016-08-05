@@ -8,12 +8,14 @@
   <%= f.hidden_field :ref, :value => @ref %>
   <div class="col-md-3"></div>
   <div class="col-md-6">
-    <div class="form-group col-md-8">
-      <%= f.text_field :email, class: "form-control", placeholder: "Saisissez votre email", required: true %>
+    <div class="form-group col-md-7">
+      <%= f.text_field :email, class: "form-control champ", placeholder: "Saisissez votre email", required: true %>
     </div>
-    <div class="actions col-md-4">
-      <%= f.submit "Rester Privilégié", class: "btn btn-primary" %>
+    <div class="actions col-md-5">
+      <%= f.submit "Rejoindre l'aventure !", class: "btn btn-primary btn-block" %>
     </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert" style="color:red;"><%= alert %></p>
   </div>
   <div class="col-md-3"></div>
 <% end %>

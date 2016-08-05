@@ -1,7 +1,64 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'https://fonts.googleapis.com/css?family=Rubik';
 
-body {
-	padding-top : 70px;
+.header-landing {
+	height : 400px;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: image-url('bg-switchiz.jpg');
+    background-position: center 75%;
+    background-repeat: none;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.header-first-text {
+	//font-size: 50px;
+}
+
+.logo {
+	margin-top: 75px;
+	float: left;
+}
+
+.section-landing {
+padding : 10px;
+text-align: center;
+}
+
+.section-landing h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.btn-primary {
+    background-color: #52a7bf; /* light blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.champ {
+	height: 52px;
+    padding-top: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+@media(max-width:768px) {
+    .header-landing .header-first-text {
+    font-size: 50px;
+    }
+    .header-landing .header-next-text {
+    }
 }
