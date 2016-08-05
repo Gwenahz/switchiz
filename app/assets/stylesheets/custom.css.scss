@@ -4,11 +4,11 @@
 @import 'https://fonts.googleapis.com/css?family=Rubik';
 
 .header-landing {
-	height : 400px;
+	height : 455px;
     color: #fff;
     background-attachment: scroll;
     background-image: image-url('bg-switchiz.jpg');
-    background-position: center 75%;
+    background-position: center 50%;
     background-repeat: none;
     z-index: -1;
     -webkit-background-size: cover;
@@ -21,9 +21,13 @@
 	//font-size: 50px;
 }
 
+.header-landing-text {
+	padding-top: 80px;
+}
+
 .logo {
-	margin-top: 75px;
-	float: left;
+	margin-top: 60px;
+	float: center;
 }
 
 .section-landing {
@@ -55,9 +59,34 @@ text-align: center;
     font-size: 16px;
 }
 
-@media(max-width:768px) {
+@media(min-width:768px) {
+
+	.header-landing {
+		height : 475px;
+	    color: #fff;
+	    background-attachment: scroll;
+	    background-image: image-url('bg-switchiz.jpg');
+	    background-position: center 60%;
+	    background-repeat: none;
+	    z-index: -1;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    background-size: cover;
+	    -o-background-size: cover;
+	}
+
+	.header-landing-text {
+		//font-size: 50px;
+		padding-top: 125px;
+	}
+
+	.logo {
+		margin-top: 80px;
+		float: center;
+	}
+
     .header-landing .header-first-text {
-    font-size: 50px;
+    font-size: 45px;
     }
     .header-landing .header-next-text {
     }

@@ -1,23 +1,29 @@
 <!-- Header -->
 <header id="" class="header-landing">
+	<div class="container text-center">
+	</div>
     <div class="container text-center">
-    	<%= image_tag "logo.png", :class => "logo", :size => "175x123" %><br><br><br><br><br><br><br><br><br>
+    		<%= image_tag "logo.png", :class => "logo", :size => "175x123" %>
+    	<div class="header-landing-text">
+    		<h1 class="header-first-text">Hello <%= @n %></h1>
+			<h2 class="header-next-text">Prépare-toi à Sourire 7 Fois Plus qu'Avant !</h2>
+    	</div>
 	</div>
 
 <%= render 'modalone' %>
 </header>
 
 <section class="section-landing">
-	<h1 class="header-first-text">Hello <%= @n %> !</h1>
-	<h2 class="header-next-text">L'aventure Switchiz commence bientôt !</h2>
-	<div class="col-md-12 text-center">
-		<i class="fa fa-key fa-2x" aria-hidden="true"></i>
-	</div>
-	<h2>Fais partie des premiers au courant ;)</h2>
+	
+	
+	
+		<br>
+	<i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+	<h3>Ton smartphone sera bientôt entre de bonnes mains ;) </h3><h3> Fait partie des premiers au courant ! </h3>
 	<%= render 'form' %>
 
-	<div class="col-md-12 text-center">
-		<p>Copyright 2016 - gwenael@switchiz.co</p>
+	<div class="col-md-12 text-center"><br>
+		<p>Copyright Switchiz 2016 - gwenael@switchiz.co</p>
 	</div>
 </section>
 
