@@ -6,10 +6,10 @@
 		</div>
     	<div class="header-landing-text">
     		<% if @n.blank? %>
-    			<% if @aventurier.commentaire.blank? %>
+    			<% if @comment.blank? %>
     				<h1 class="header-first-text">L'aventure Switchiz commence bientôt</h1>
     			<% else %>
-    				<h1 class="header-first-text"><%= @aventurier.commentaire %> t'invite à découvrir Switchiz</h1>
+    				<h1 class="header-first-text"><%= @comment %> t'invite à découvrir Switchiz</h1>
     			<% end %>
     		<% else %>
     			<h1 class="header-first-text">Hello <%= @n %></h1>
