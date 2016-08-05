@@ -35,8 +35,9 @@
 
 <%= render 'modaltwo' %>
 
-<!--
 <script type="text/javascript">
+
+    mixpanel.track("Prelaunch sharepage");
 	
 	function addEvent(obj, evt, fn) {
     if (obj.addEventListener) {
@@ -53,4 +54,3 @@ addEvent(document, 'mouseout', function(evt) {
     }
 });
 </script>
--->
