@@ -6,7 +6,7 @@
 		</div>
     	<div class="header-landing-text">
     		<% if @n.blank? %>
-    			<% if @comment.blank? %>
+    			<% if @inv.blank? %>
     				<h1 class="header-first-text">L'aventure Switchiz commence bientôt</h1>
     			<% else %>
     				<h1 class="header-first-text"><%= @comment %> t'invite à découvrir Switchiz</h1>
@@ -25,7 +25,7 @@
 	<%= render 'form' %>
 
 	<div class="col-md-12 text-center prelaunch-footer">
-		<p>Copyright Switchiz 2016 - <a href="mailto:gwenael@switchiz.co">gwenael@switchiz.co</a></p>
+		<p><a href="mailto:gwenael@switchiz.co">gwenael@switchiz.co</a></p>
 	</div>
 </section>
 
