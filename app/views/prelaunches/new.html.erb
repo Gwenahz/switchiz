@@ -9,7 +9,11 @@
     			<% if @inv.blank? %>
     				<h1 class="header-first-text">L'aventure Switchiz commence bientôt</h1>
     			<% else %>
-    				<h1 class="header-first-text"><%= @comment %> t'invite à découvrir Switchiz</h1>
+                    <% if @comment.blank? %>
+                        <h1 class="header-first-text">L'aventure Switchiz commence bientôt</h1>
+                    <% else %>
+    				    <h1 class="header-first-text"><%= @comment %> t'invite à découvrir Switchiz</h1>
+                    <% end %>
     			<% end %>
     		<% else %>
     			<h1 class="header-first-text">Hello <%= @n %></h1>
