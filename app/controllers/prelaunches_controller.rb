@@ -30,6 +30,7 @@ class PrelaunchesController < ApplicationController
   def new
     @n = params[:n]
     @inv = params[:inv]
+    @cookee = cookies[:refcode]
     if @inv.blank?
     else
       @aventurier = Prelaunch.find_by(code: @inv)
@@ -59,6 +60,7 @@ class PrelaunchesController < ApplicationController
       end
     
     @prelaunch.save
+    cookies[:refcode] = { value: @prelaunch.code, expires: 1.month.from_now }
     # respond_with(@prelaunch)
     redirect_to action: 'friends', code: @prelaunch.code
     

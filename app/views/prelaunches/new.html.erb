@@ -26,7 +26,16 @@
 
 <section class="section-landing">
 	<h3><i class="fa fa-lock fa-1x" aria-hidden="true"></i><br>Rejoins le club qui va chouchouter ton smartphone ;) <br> Fais partie des premiers au courant ! </h3>
-	<%= render 'form' %>
+    <% if @cookee.blank? %>
+        <%= render 'form' %>
+    <% else %>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <%= link_to "Voir mes amis inscrits", friends_path(:code => @cookee), :class => "btn btn-primary" %><br>
+        </div>
+        <div  class="col-md-4"></div>
+    <% end %>
+	
 
 	<div class="col-md-12 text-center prelaunch-footer">
 		<p><a href="mailto:gwenael@switchiz.co">gwenael@switchiz.co</a></p>
