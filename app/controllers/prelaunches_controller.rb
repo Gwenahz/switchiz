@@ -9,6 +9,7 @@ class PrelaunchesController < ApplicationController
     @prelaunchescount = 0
     @prelaunchesref = 0
     @prelaunches.each do |prelaunch|
+      @prelaunchescount = @prelaunchescount +1
       if prelaunch.ref.blank?
       else
         @prelaunchesref = @prelaunchesref +1
