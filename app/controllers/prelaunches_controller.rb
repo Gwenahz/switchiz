@@ -6,6 +6,9 @@ class PrelaunchesController < ApplicationController
 
   def index
     @prelaunches = Prelaunch.all
+    @prelaunchesref = Prelaunch.where(ref: '').count
+    @ratio = @prelaunchesref.to_d / @prelaunches.count.to_d
+    # @prelaunchesref = @prelaunches.count - @prelaunchesnoref 
     respond_with(@prelaunches)
     # redirect_to root_path
   end
