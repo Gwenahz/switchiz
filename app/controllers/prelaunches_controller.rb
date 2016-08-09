@@ -1,5 +1,6 @@
 class PrelaunchesController < ApplicationController
   before_action :set_prelaunch, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_admin!, only: [:index, :edit, :update, :destroy, :show]
 
   respond_to :html
 
