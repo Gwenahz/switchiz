@@ -19,7 +19,7 @@
   </thead>
 
   <tbody>
-    <% @prelaunches.each do |prelaunch| %>
+    <% @prelaunches.order(count: :desc).each do |prelaunch| %>
       <tr>
         <td><%= prelaunch.id %></td>
         <td><%= prelaunch.email %></td>

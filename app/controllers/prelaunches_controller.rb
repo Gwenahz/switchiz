@@ -16,7 +16,7 @@ class PrelaunchesController < ApplicationController
       end
     end
 
-    @ratio = @prelaunchesref.to_d / @prelaunches.count.to_d
+    @ratio = @prelaunchesref.to_i / @prelaunchescount.to_f
     # @prelaunchesref = @prelaunches.count - @prelaunchesnoref 
     respond_with(@prelaunches)
     # redirect_to root_path
