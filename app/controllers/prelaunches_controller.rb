@@ -6,7 +6,15 @@ class PrelaunchesController < ApplicationController
 
   def index
     @prelaunches = Prelaunch.all
-    @prelaunchesref = Prelaunch.where(ref: '').count
+    @prelaunchescount = 0
+    @prelaunchesref = 0
+    @prelaunches.each do |prelaunch|
+      if prelaunch.ref.blank?
+      else
+        @prelaunchesref = @prelaunchesref +1
+      end
+    end
+
     @ratio = @prelaunchesref.to_d / @prelaunches.count.to_d
     # @prelaunchesref = @prelaunches.count - @prelaunchesnoref 
     respond_with(@prelaunches)

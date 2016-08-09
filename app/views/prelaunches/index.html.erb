@@ -8,6 +8,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Email</th>
       <th>Commentaire</th>
       <th>Count</th>
@@ -20,6 +21,7 @@
   <tbody>
     <% @prelaunches.each do |prelaunch| %>
       <tr>
+        <td><%= prelaunch.id %></td>
         <td><%= prelaunch.email %></td>
         <td><%= prelaunch.commentaire %></td>
         <td><%= prelaunch.count %></td>
