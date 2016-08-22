@@ -1,8 +1,14 @@
-<h1>Bienvenue au club, <%= @profil.prenom %> !</h1>
-<h2>Votre prochaine Box Switchiz arrivera chez vous dans quelques jours :)</h2>
-<p></p>
-<% if @profil.adresse == nil %>
-	<p>Pour la recevoir, nous avons besoin de connaitre votre adresse et quelques infos sur votre smartphone. Ça ne prend que quelques minutes</p>
-	<%= link_to "Compléter mon profil", edit_profil_path(:id => @profil.id), class: "btn btn-primary" %>
-<% else %>
-<% end %>
+<div class="text-center">
+	<br>
+	<% if @profil.adresse == nil %>
+		<h1>Bienvenue au club, <%= @profil.prenom %> !</h1>
+		<h2>Votre prochaine Box Switchiz arrivera chez vous dans quelques jours :)</h2>
+		<p>Pour la recevoir, nous avons besoin de connaitre l'adresse de votre home sweet home :</p>
+		<%= render :partial => "profils/formadresse" %>
+		<%= link_to "Compléter mon profil", edit_profil_path(:id => @profil.id), class: "btn btn-primary" %>
+	<% else %>
+		<h1>Hey <%= @profil.prenom %> !</h1>
+		<h2>Chaque mois vous pouvez choisir un objet de votre box, tout le reste de la box est une surprise ;) </h2>
+		<p>Si vous ne choisissez pas, on estimera que vous nous faites confiance et on choisira pour vous.</p>
+	<% end %>
+</div>

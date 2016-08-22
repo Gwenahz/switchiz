@@ -10,17 +10,11 @@
       </ul>
     </div>
   <% end %>
-  <div class="col-md-12">
-    <div class="form-group col-md-12">
-      <%= f.label :adresse %><br>
-      <%= f.text_field :adresse, class: "form-control", required: true %>
-    </div>
-    <div class="form-group col-md-12">
-      <%= f.label "Complément d'adresse" %><br>
-      <%= f.text_field :compl_adresse, class: "form-control", placeholder: "(Code d'accès, bâtiment, etc...)" %>
+    <div class="form-group">
+      <%= f.label "Votre numéro IMEI (15 chiffres)" %><br>
+      <%= f.text_field :imei, class: "form-control", required: true %>
     </div>
     <div class="actions">
       <%= f.submit %>
     </div>
-  <div>
 <% end %>

@@ -1,0 +1,8 @@
+<h1>Bienvenue au club, <%= @profil.prenom %> !</h1>
+<h2>Votre prochaine Box Switchiz arrivera chez vous dans quelques jours :)</h2>
+<p></p>
+<% if @profil.adresse == nil %>
+	<p>Pour la recevoir, nous avons besoin de connaitre votre adresse et quelques infos sur votre smartphone. Ça ne prend que quelques minutes</p>
+	<%= link_to "Compléter mon profil", edit_profil_path(:id => @profil.id), class: "btn btn-primary" %>
+<% else %>
+<% end %>

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :profils
 
   get 'dashboards/home'
+  get 'dashboards/welcome' => 'dashboards#homenew'
   get 'dashboards/smartphone'
   get 'dashboards/reparer'
 

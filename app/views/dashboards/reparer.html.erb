@@ -1,1 +1,28 @@
-<h1 class="text-center">Pour réparer votre smartphone, appelez nous au 09 80 80 83 13 pour prendre rendez vous.</h1>
+<% if @profil.imei == nil %>
+	<br><h1 class="text-center">Un soucis avec votre smartphone ?</h1><br>
+	<div class="col-md-12">
+		<div class="col-md-3 text-center">
+			<%= image_tag @smartphone.image.url(:medium) %>
+		</div>
+		<div class="col-md-9">
+			<h3>Ne vous inquiétez pas on s'en occupe !</h3>
+			<p>Pour faire réparer votre smartphone, nous avons besoin de connaître votre numéro IMEI<br>
+		(Vous le trouverez au dos de votre smartphone ou dans "Réglages>Général")</p>
+		<%= render :partial => "profils/formimei" %>
+		</div>
+	</div>
+	
+
+<% else %>
+	<br><h1 class="text-center">Un soucis avec votre smartphone ?</h1><br>
+	<div class="col-md-12">
+		<div class="col-md-4 text-center">
+			<%= image_tag @smartphone.image.url(:medium) %><br>
+			<h4> Mon <%= @smartphone.modele %> </h4><br>
+		</div>
+		<div class="col-md-8">
+			<p class="text-center">Pour réparer votre smartphone, appelez nous au 09 80 80 83 13 pour prendre rendez vous. <br>
+			Vous pouvez aussi nous envoyer un mail avec votre problème à gwenael@switchiz.co</p>
+		</div>
+	</div>
+<% end %>
