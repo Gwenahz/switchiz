@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :profil, dependent: :destroy
+
+  validates :phoneid, presence: true
 end

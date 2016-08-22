@@ -12,30 +12,37 @@
   <% end %>
 <div class="col-md-12">
     <div class="col-md-4">
-      <h3>Récapitulatif</h3>
+      <div class="col-md-12 panel panel-default">
+        <div class="text-center">
+          <br>
+          <%= image_tag @smartphone.image.url(:medium) %><br>
+        </div>
+        <h4>Votre abonnement Switchiz :</h4>
+        <i class="fa fa-check" aria-hidden="true"></i> Réparations gratuites<br>
+        <i class="fa fa-check" aria-hidden="true"></i> Assistance 7j/7<br>
+        <i class="fa fa-check" aria-hidden="true"></i> Box Switchiz chaque mois<br>
+        <i class="fa fa-check" aria-hidden="true"></i> Sans engagement<br>
+        <h3>9,99€/mois</h3>
+      </div>
     </div>
+
+
+
     <div class="col-md-8">
-      <div class="form-group">
-        <%= f.label :smartphone_id %><br>
-        <%= f.hidden_field :smartphone_id, :id => 'profil_modele' %>
-        <div class="col-md-12 dropdown">
-          <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="dropdown_text">
-              Sélectionnez votre smartphone
-              <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <% Smartphone.where(marque: 'Apple').to_a.each do |smartphone| %>
-              <li><a href="" onClick="return getmodele(<%= smartphone.id %>);"><%= smartphone.modele %></a></li>
-            <% end %>
-            <li class="divider"></li>
-            <li><a href="" onClick="">Autre</a></li>
-          </ul>
+      <div class="col-md-12">
+        <div class="col-md-4 text-center">
+          <i class="fa fa-lock fa-2x" aria-hidden="true"></i><br>
+          <h4>Paiement sécurisé</h4>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fa fa-undo fa-2x" aria-hidden="true"></i><br>
+          <h4>14 jours pour changer d'avis</h4>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i><br>
+          <h4>Livraison offerte</h4>
         </div>
       </div><br>
-
-      <div id="stripe_error" class="alert alert-danger" style="display:none">
-        <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
-      </div>
 
       <div class="form-group">
         <%= f.label "Prénom*" %><br>
@@ -46,10 +53,14 @@
         <%= f.text_field :nom, class: "form-control", required: true %>
       </div>
 
+      <div id="stripe_error" class="alert alert-danger" style="display:none">
+        <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+      </div>
+
       <div class="form-group">
         <div class="row">
           <div class="col-md-8">
-            <%= label_tag :card_number, "Credit Card Number" %>
+            <%= label_tag :card_number, "Numéro de carte banquaire" %>
             <%= text_field_tag :card_number, nil, { :name => nil, :'data-stripe' => "number", class: "card-number form-control" } %>
           </div>
           <div class="col-md-4">
@@ -59,7 +70,7 @@
         </div>
       </div>
       <div class="form-group">
-        <%= label_tag nil, "Expiration Date" %>
+        <%= label_tag nil, "Date d'expiration" %>
         <div class="row">
           <div class="col-md-3">
             <%= select_month nil, { use_two_digit_numbers: true }, { :name => nil, :'data-stripe' => "exp-month", class: "card-expiry-month form-control" } %>
@@ -71,7 +82,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "GOOO", class: "btn btn-primary", data: { no_turbolink: true }%>
+        <%= f.submit "REJOINDRE LE CLUB", class: "btn btn-primary btn-block", data: { no_turbolink: true }%>
       </div>
     </div>
   </div>

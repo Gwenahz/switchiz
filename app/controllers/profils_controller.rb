@@ -22,6 +22,7 @@ class ProfilsController < ApplicationController
     if Profil.exists?(:user_id => current_user.id)
       redirect_to dashboards_home_path 
     else
+      @smartphone = Smartphone.find(current_user.phoneid)
       @profil = Profil.new
       respond_with(@profil)
     end
