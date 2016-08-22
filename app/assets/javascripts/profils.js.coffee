@@ -11,7 +11,9 @@ payment =
 
   handleStripeResponse: (status, response) ->
     if status == 200
-      alert(response.id)
+      $('#new_profil').append($('<input type="hidden" name="stripe_card_token" />').val(response.id))
+      $('#new_profil')[0].submit()
     else
-      alert(response.error.message)
+      $('#stripe_error').text(response.error.message).show()
+      $('input[type=submit]').attr('disabled', false)
 

@@ -35,9 +35,23 @@ class ProfilsController < ApplicationController
   def create
     @profil = Profil.new(profil_params)
     @profil.user_id = current_user.id
-    @profil.save
-    # respond_with(@profil)
-    redirect_to dashboards_home_path 
+
+    Stripe.api_key = ENV["STRIPE_API_KEY"]
+    stripe_card_token = params[:stripe_card_token]
+
+    begin
+      customer = Stripe::Customer.create(
+        :description => current_user.email,
+        :plan => "switchiz",
+        :source => stripe_card_token
+        )
+      @profil.stripe_customer_token = customer.id
+      @profil.save
+      redirect_to dashboards_home_path, :notice => "Votre inscription est bien validée"
+    rescue Stripe::CardError => e
+      flash[:danger] = e.message
+    end
+
   end
 
   def update
@@ -57,7 +71,7 @@ class ProfilsController < ApplicationController
     end
 
     def profil_params
-      params.require(:profil).permit(:user_id, :smartphone_id, :couleur_id, :prenom, :nom, :adresse, :compl_adresse, :imei, :numtel)
+      params.require(:profil).permit(:user_id, :smartphone_id, :couleur_id, :prenom, :nom, :adresse, :compl_adresse, :imei, :numtel, :stripe_customer_token)
     end
 
     def check_user
