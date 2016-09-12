@@ -32,6 +32,14 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
+  <!-- Slider
+    ================================================== -->
+    <%= stylesheet_link_tag "owl.carousel", media: "screen" %>
+    <%= stylesheet_link_tag "owl.theme", media: "screen" %>
+
+  
+  <%= javascript_include_tag "modernizr.custom" %>
+  
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -49,7 +57,7 @@
     <%= render 'layouts/header' %>
   <% end %>
 	
-  <% if current_page?(root_path) || current_page?(friends_path) %>
+  <% if current_page?(root_path) || current_page?(friends_path) || current_page?(pages_index_path)%>
     <div class="">
   <% else %>
     <div class="container">

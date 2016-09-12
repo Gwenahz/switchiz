@@ -17,6 +17,34 @@
     -o-background-size: cover;
 }
 
+.header-home {
+    height : 600px;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: image-url('bg-switchiz.jpg');
+    background-position: center 50%;
+    background-repeat: none;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.section-blue {
+    color: #fff;
+    background-color: #4176AA;
+    text-align: center;
+    margin: 100px 0 100px 0;
+}
+
+.section-grey {
+    color: #fff;
+    background-color: #4176AA;
+    text-align: center;
+    margin: 100px 0 100px 0;
+}
+
 .prelaunch-footer {
     padding-top: 20px;
 }
@@ -46,6 +74,10 @@
 
 .header-landing-text {
 	padding-top: 80px;
+}
+
+.header-home-text {
+    padding-top: 250px;
 }
 
 .logo-prelaunch {
