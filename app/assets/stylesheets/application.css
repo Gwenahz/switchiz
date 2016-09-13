@@ -15,6 +15,8 @@
  *= require_self
  */
 
+@import 'https://fonts.googleapis.com/css?family=Rubik';
+
 body {
 	font-family: 'Rubik', Sans-Serif;
 }

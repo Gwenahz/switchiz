@@ -1,3 +1,9 @@
+@import 'https://fonts.googleapis.com/css?family=Rubik';
+
+body {
+	font-family: 'Rubik', Sans-Serif;
+}
+
 h1{
 	text-transform: uppercase;
 }
